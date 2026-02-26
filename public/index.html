@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Žaliasis Traukinys | Kinų Restoranas Kaune</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar hidden-onload">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">Žaliasis <span class="accent">Traukinys</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#about" data-i18n="navAbout">Apie Mus</a>
+                <a href="#menu" data-i18n="navMenu">Meniu</a>
+                <a href="#contact" data-i18n="navContact">Kontaktai</a>
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="lt">LT</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#about" class="mobile-nav-link" data-i18n="navAbout">Apie Mus</a>
+        <a href="#menu" class="mobile-nav-link" data-i18n="navMenu">Meniu</a>
+        <a href="#contact" class="mobile-nav-link" data-i18n="navContact">Kontaktai</a>
+        <div class="lang-switch-mobile">
+            <button class="lang-btn active" data-lang="lt">LT</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </div>
+
+    <header class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="subtitle slide-up" data-i18n="heroSub">Autentiški skoniai Kaune</span>
+            <h1 class="slide-up delay-1" data-i18n="heroTitle">Kinų Restoranas <br><span class="accent">Žaliasis
+                    Traukinys</span></h1>
+            <p class="slide-up delay-2" data-i18n="heroDesc">Kviečiame pasinerti į unikalią kinų virtuvės kelionę.
+                Kiekvieną dieną su meile ir meistriškumu ruošiami tradiciniai patiekalai.</p>
+            <div class="hero-buttons slide-up delay-3">
+                <a href="#menu" class="btn btn-primary" data-i18n="heroBtnMenu">Atidaryti Meniu</a>
+                <a href="#contact" class="btn btn-secondary" data-i18n="heroBtnContact">Susisiekti</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="about section" id="about">
+        <div class="container grid-2-col">
+            <div class="about-text fade-in-section">
+                <h2 class="section-title" data-i18n="aboutTitle">Tradicijos ir skonis</h2>
+                <div class="title-underline"></div>
+                <p data-i18n="aboutDesc">Nuo traškios vištienos „Gou Bao“ iki tobulai paruoštos jautienos su sojos
+                    padažu – mūsų restorane rasite autentiškus kinų virtuvės skonius, kurie nustebins ir pradžiugins
+                    kiekvieną.</p>
+
+                <div class="info-cards">
+                    <div class="glass-card info-card">
+                        <div class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h3 data-i18n="addressTitle">Adresas</h3>
+                            <p>Gedimino g. 30,<br>Kaunas, 44319</p>
+                        </div>
+                    </div>
+                    <div class="glass-card info-card">
+                        <div class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h3 data-i18n="phoneTitle">Telefonas</h3>
+                            <p>(8-37) 208492</p>
+                        </div>
+                    </div>
+                    <div class="glass-card info-card">
+                        <div class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <h3 data-i18n="emailTitle">El. paštas</h3>
+                            <p>yuewenge321@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image fade-in-section">
+                <div class="glass-card image-container" id="feature-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu section dark-section" id="menu">
+        <div class="container">
+            <div class="section-header fade-in-section">
+                <h2 class="section-title text-center" data-i18n="menuTitle">Mūsų <span class="accent">Meniu</span></h2>
+                <div class="title-underline center"></div>
+                <p class="text-center" data-i18n="menuSub">Dienos pietūs nuo pirmadienio iki penktadienio 10:30 - 16:00
+                    val.</p>
+            </div>
+
+            <div class="menu-grid" id="menu-container">
+                <div class="loading-spinner"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact section" id="contact">
+        <div class="container grid-2-col">
+            <div class="contact-form-container glass-card fade-in-section">
+                <h2 data-i18n="contactTitle">Susisiekite su mumis</h2>
+                <p data-i18n="contactSub">Turite klausimų? Parašykite mums.</p>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name" data-i18n="nameLabel">Vardas</label>
+                        <input type="text" id="name" name="name" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-i18n="emailLabel">El. paštas</label>
+                        <input type="email" id="email" name="email" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" data-i18n="messageLabel">Žinutė</label>
+                        <textarea id="message" name="message" rows="4" required class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" data-i18n="submitBtn">Siųsti Žinutę</button>
+                    <div id="form-feedback" class="form-feedback hidden">Ačiū, jūsų žinutė gauta!</div>
+                </form>
+            </div>
+
+            <div class="map-container glass-card fade-in-section">
+                <iframe
+                    src="https://maps.google.com/maps?q=%C5%BDaliasis%20traukinys,%20Gedimino%20g.%2030,%20Kaunas,%2044319%20Kauno%20m.%20sav.&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                    width="100%" height="100%" style="border:0; border-radius: 12px; min-height: 350px;"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    class="dark-map"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <div class="footer-social">
+                <a href="https://facebook.com/zaliasistraukinys/" target="_blank" class="social-link">
+                    <div class="social-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            fill="currentColor" stroke="none">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="footer-creator">
+                <p>Created by <a href="mailto:andrewanapoliskiy@gmail.com" class="creator-link">ApOTaG</a></p>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="copyRight">&copy; 2026 Žaliasis Traukinys. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/lang.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

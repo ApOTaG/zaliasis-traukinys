@@ -1,0 +1,45 @@
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const path = require('path');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(cors());
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
+const menuItems = [
+    { id: 1, name: "Traški vištiena Gou Bao", enName: "Crispy chicken Gou Bao", price: "6,65 €", image: '/images/crispy_chicken.png' },
+    { id: 2, name: "Traški vištiena saldžiarūgščiame padaže", enName: "Chrispy chicken in sweet-sour sauce", spicy: true, price: "6,65 €", image: '/images/crispy_chicken.png' },
+    { id: 3, name: "Traški vištiena „Vyšnia“", enName: "Chrispy chicken „Cherry“", price: "6,65 €", image: '/images/crispy_chicken.png' },
+    { id: 4, name: "Vištiena sojos padaže su daržovėmis ir bambukais", enName: "Chicken in soy sauce with vegetables and bamboo", price: "6,65 €", image: '/images/crispy_chicken.png' },
+    { id: 5, name: "Vištiena Gong Bao", enName: "Chicken Gong Bao", spicy: true, price: "6,65 €", image: '/images/crispy_chicken.png' },
+    { id: 6, name: "Traški vištiena saldžiarūgščiame padaže", enName: "Chrispy chicken in sweet-sour sauce", price: "6,65 €", image: '/images/crispy_chicken.png' },
+    { id: 7, name: "Traški kiauliena", enName: "Chrispy pork", spicy: true, price: "6,65 €", image: '/images/spicy_pork.png' },
+    { id: 8, name: "Jautiena sojos padaže su daržovėmis ir bambukais", enName: "Beef in soy sauce with vegetables and bamboo", price: "7,30 €", image: '/images/beef_veg.png' },
+    { id: 9, name: "Jautiena saldžiarūgščiame padaže", enName: "Beef in sweet-sour sauce", spicy: true, price: "7,30 €", image: '/images/beef_veg.png' },
+    { id: 10, name: "Jautiena su daržovėmis", enName: "Beef with vegetables", price: "7,30 €", image: '/images/beef_veg.png' },
+    { id: 11, name: "Traški žuvis sojos padaže", enName: "Crispy fish in soy sauce", spicy: true, price: "7,30 €", image: '/images/crispy_chicken.png' },
+    { id: 12, name: "Žuvis saldžiarūgščiame padaže", enName: "Fish in sweet-sour sauce", spicy: true, price: "7,30 €", image: '/images/crispy_chicken.png' },
+    { id: 13, name: "Traškūs baklažanai saldžiarūgščiame padaže", enName: "Chrispy aubergines in sweet-sour sauce", spicy: true, price: "6,65 €", image: '/images/spicy_pork.png' },
+    { id: 14, name: "Traškūs baklažanai su sezamu", enName: "Chrispy aubergines with sesame seeds", price: "6,65 €", image: '/images/spicy_pork.png' },
+    { id: 15, name: "Keptos daržovės", enName: "Fried vegetables", price: "6,65 €", image: '/images/beef_veg.png' },
+    { id: 16, name: "Traški antis saldžiarūgščiame padaže", enName: "Chrispy duck in sweet-sour sauce", spicy: true, price: "7,30 €", image: '/images/fried_duck.png' },
+    { id: 17, name: "Antis su daržovėmis ir bambukais", enName: "Duck with vegetables and bamboo", price: "7,30 €", image: '/images/fried_duck.png' }
+];
+
+app.get('/api/menu', (req, res) => {
+    res.json(menuItems);
+});
+
+app.post('/api/contact', (req, res) => {
+    // Mock save
+    console.log('Received contact:', req.body);
+    res.json({ success: true, message: 'Žinutė gauta!' });
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
