@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const fetchMenu = async () => {
         try {
-            const response = await fetch('/api/menu');
+            const response = await fetch('data/menu.json');
             if (!response.ok) throw new Error('Failed to fetch menu');
             window.menuItemsData = await response.json();
             window.renderMenu();
@@ -88,28 +88,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
             submitBtn.textContent = '...';
             submitBtn.disabled = true;
 
             try {
-                const response = await fetch('/api/contact', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
+                // Simulate network request for static GitHub Pages hosting
+                await new Promise(resolve => setTimeout(resolve, 800));
 
-                if (response.ok) {
-                    formFeedback.classList.remove('hidden');
-                    contactForm.reset();
-                    setTimeout(() => formFeedback.classList.add('hidden'), 5000);
-                }
+                formFeedback.classList.remove('hidden');
+                contactForm.reset();
+                setTimeout(() => formFeedback.classList.add('hidden'), 5000);
             } catch (error) {
                 console.error(error);
                 alert('Klaida!');
