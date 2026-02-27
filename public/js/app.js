@@ -44,7 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
         menuContainer.innerHTML = '';
 
         window.menuItemsData.forEach((item, index) => {
-            const spicyHtml = item.spicy ? '<span class="spicy-icon" title="Spicy">🌶️</span>' : '';
+            const spicySvg = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="var(--clr-accent-red)" stroke="var(--clr-accent-red)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-flame" style="vertical-align: middle; margin-top: -2px;"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>`;
+            const spicyHtml = item.spicy ? `<span class="spicy-icon" title="Spicy">${spicySvg}</span>` : '';
             const delayStr = `style="transition-delay: ${index * 50}ms"`;
 
             // Translations
