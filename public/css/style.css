@@ -788,80 +788,82 @@ textarea.form-control {
     color: #ccc;
 }
 
-/* Footer */
+/* Footer Layout */
 footer {
-    background: #050806;
-    padding: 4rem 0 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: #0a0a0a;
+    /* Darker background to separate from content */
+    padding: 6rem 0 2rem;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 3rem;
+    margin-bottom: 4rem;
 }
 
 @media (min-width: 768px) {
     .footer-content {
-        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 2rem;
     }
 }
 
-.footer-links a {
+/* Column 1: Brand & Location */
+.footer-brand .logo {
     display: block;
-    color: var(--clr-text-muted);
-    text-decoration: none;
-    margin-bottom: 0.5rem;
-    transition: color var(--transition-fast);
-}
-
-.footer-links a:hover {
-    color: var(--clr-gold);
-}
-
-.footer-contact h3,
-.footer-links h3 {
-    color: white;
     margin-bottom: 1rem;
 }
 
-.footer-contact p {
+.footer-brand p {
     color: var(--clr-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
 }
 
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    color: #666;
-    font-size: 0.9rem;
+.footer-address {
+    margin-top: 1.5rem;
+    color: var(--clr-text-main);
+    font-size: 0.95rem;
 }
 
-/* Footer Social */
+/* Column 2: Working Hours */
+.footer-column h3 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+}
+
+.footer-hours p {
+    color: var(--clr-text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Column 3: Socials */
 .footer-social {
     display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: flex-start;
 }
 
 .social-link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 1rem;
     color: var(--clr-text-muted);
     text-decoration: none;
-    font-size: 1.1rem;
-    transition: color var(--transition-fast);
+    transition: all var(--transition-fast);
 }
 
 .social-icon {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    border: 1px solid rgba(251, 133, 0, 0.5);
+    border: 1px solid rgba(251, 133, 0, 0.3);
+    /* Subtle gold/orange outline */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -870,31 +872,48 @@ footer {
     background: transparent;
 }
 
-.social-link:hover {
-    color: white;
+.social-link:hover .social-icon {
+    background: rgba(251, 133, 0, 0.1);
+    border-color: var(--clr-gold);
+    color: var(--clr-gold);
+    box-shadow: 0 0 15px rgba(251, 133, 0, 0.2);
 }
 
-.social-link:hover .social-icon {
-    background: rgba(251, 133, 0, 0.8);
-    border-color: rgba(251, 133, 0, 1);
-    color: white;
+/* Footer Bottom Bar */
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    /* Subtle dark-gray horizontal divider */
+    color: #666;
+    font-size: 0.85rem;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .footer-bottom {
+        flex-direction: row;
+    }
 }
 
 .footer-creator {
-    margin-top: 1rem;
-    color: var(--clr-text-muted);
+    color: #888;
 }
 
 .creator-link {
     color: var(--clr-accent-red);
     text-decoration: none;
     font-weight: 700;
-    transition: color var(--transition-fast);
+    transition: all var(--transition-fast);
 }
 
 .creator-link:hover {
     color: var(--clr-gold);
-    text-decoration: underline;
+    text-shadow: 0 0 10px rgba(251, 133, 0, 0.5);
+    /* Smooth brightness/glow hover effect */
 }
 
 /* Scroll Animations */
