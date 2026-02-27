@@ -14,6 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuBtn.addEventListener('click', toggleMenu);
     mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
 
+    // Close mobile menu when clicking outside of it
+    document.addEventListener('click', (e) => {
+        if (mobileNav.classList.contains('active') &&
+            !mobileNav.contains(e.target) &&
+            !mobileMenuBtn.contains(e.target)) {
+            toggleMenu();
+        }
+    });
+
     // 2. Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
