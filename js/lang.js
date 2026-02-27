@@ -26,6 +26,12 @@ const translations = {
         footerLinks: "Nuorodos",
         footerWork: "Darbo Laikas",
         footerDays: "I - V: 10:30 - 16:00<br>VI - VII: Uždaryta",
+        footerDesc: "Autentiški kinų skoniai Kaune",
+        footerAddress: "Gedimino g. 30, Kaunas",
+        footerHoursTitle: "Darbo Laikas",
+        footerHours1: "Dienos pietūs:",
+        footerHours2: "Pr-P 10:30 - 16:00",
+        footerSocialsTitle: "Sekite mus",
         copyRight: "&copy; 2026 Žaliasis Traukinys. Visos teisės saugomos."
     },
     en: {
@@ -55,6 +61,12 @@ const translations = {
         footerLinks: "Links",
         footerWork: "Working Hours",
         footerDays: "Mon - Fri: 10:30 - 16:00<br>Sat - Sun: Closed",
+        footerDesc: "Authentic Chinese tastes in Kaunas",
+        footerAddress: "Gedimino g. 30, Kaunas",
+        footerHoursTitle: "Working Hours",
+        footerHours1: "Daily lunch:",
+        footerHours2: "Mon-Fri 10:30 AM - 4:00 PM",
+        footerSocialsTitle: "Follow us",
         copyRight: "&copy; 2026 Žaliasis Traukinys. All rights reserved."
     }
 };
