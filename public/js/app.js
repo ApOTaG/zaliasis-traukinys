@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const itemHtml = `
                 <div class="menu-item glass-card fade-in-section is-visible" ${delayStr}>
-                    ${item.image ? `<div class="menu-img-wrap"><img src="${item.image}" alt="${itemName}" class="menu-item-img"></div>` : ''}
+                    ${item.image ? `<div class="menu-img-wrap"><img src="${item.image}" alt="${itemName}" class="menu-item-img" loading="lazy"></div>` : ''}
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3 class="menu-item-title">${item.id}. ${itemName} ${spicyHtml}</h3>

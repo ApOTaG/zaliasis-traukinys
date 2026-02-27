@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Restaurant website",
   "main": "server.js",
-  "homepage": "https://ApOTaG.github.io/-aliasis-Traukinys",
+  "homepage": "https://ApOTaG.github.io/zaliasis-traukinys",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
