@@ -40,7 +40,7 @@ const translations = {
         navMenu: "Menu",
         navContact: "Contact",
         heroSub: "Authentic tastes in Kaunas",
-        heroTitle: "Kinų Restoranas <br><span class='accent'>Žaliasis Traukinys</span>",
+        heroTitle: "Chinese Restaurant <br><span class='accent'>Žaliasis Traukinys</span>",
         heroDesc: "We invite you to immerse yourself in a unique journey of Chinese cuisine. Traditional dishes are prepared every day with love and skill.",
         heroBtnMenu: "Open Menu",
         heroBtnContact: "Contact Us",
